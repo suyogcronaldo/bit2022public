@@ -1,0 +1,26 @@
+.box
+{
+    background-color: lightgrey;
+    width:50%;
+    border: 50px;
+    padding:2px;
+
+}
+body
+{
+border: 50pt;
+}
+
+.top
+{
+    margin-left: 100px;
+}
+.foot
+{
+    text-align: center;
+}
+.emer
+{
+text-align: center;
+text-decoration: underline;
+}
