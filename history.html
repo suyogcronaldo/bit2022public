@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Booking Information</title>
+	<style>
+            body {
+            background-image: url('https://images.wallpaperscraft.com/image/single/books_library_shelves_138556_3840x2160.jpg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-color: #EAF4EB;
+			font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+		}
+		
+		h1 {
+			text-align: center;
+			margin-top: 20px;
+			margin-bottom: 10px;
+		}
+
+
+		table {
+			border-collapse: collapse;
+			width: 80%;
+			margin:auto;
+		}
+
+		table, th, td {
+			border: 1px solid #6ab04c;
+		}
+
+		th, td {
+			padding: 10px;
+			text-align: center;
+		}
+
+		th {
+			background-color: #6ab04c;
+			color: white;
+		}
+
+        .navbar {
+			background-color: #2E7166;
+			overflow: hidden;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 10px;
+		}
+		
+		.navbar a {
+			color: #FFFFFF;
+			text-decoration: none;
+			margin: 0 10px;
+			font-size: 18px;
+		}
+		
+		.logo {
+			font-weight: bold;
+			font-size: 24px;
+		}
+        .data{
+			background-color: #FFFFFF;
+			margin: 50px auto;
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+		}
+
+        .nav-button {
+			background-color: transparent;
+			border: none;
+			color: #fff;
+			cursor: pointer;
+			font-size: 16px;
+            margin-right: 10px;
+		}
+
+		.nav-buttons {
+			display: flex;
+			align-items: center;
+		}
+
+		.nav-buttons button {
+			margin-left: 10px;
+		}
+
+	</style>
+</head>
+<body>
+    <div class="navbar">
+		<span class="logo" style="color:#ccc">Smart Library</span>	
+		<div class="nav-buttons">
+			<button type="submit" class="nav-button"><a href="reserve.html">Back</a></button>
+			<button type="submit" class="nav-button" style="box-shadow: #6ab04c;"><a href="smart.html">Logout</a></button>
+		</div>
+	</div>>
+	<center><h1 style="background-color: #ccc; width:940px; border-radius: 5px;">Booking Information</h1></center>
+
+	<table class="data">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Username</th>
+				<th>Booked Book</th>
+				<th>Date</th>
+				<th>Returned Date</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Ram Sharma</td>
+				<td>user1234</td>
+				<td>Software Engineering</td>
+				<td>2023-05-15</td>
+				<td>2023-05-30</td>
+			</tr>
+			<tr>
+				<td>Ram Sharma</td>
+				<td>user1234</td>
+				<td>Microprocessor Architecture</td>
+				<td>2023-05-15</td>
+				<td>2023-05-30</td>
+			</tr>
+            <tr>
+				<td>Ram Sharma</td>
+				<td>user1234</td>
+				<td>C Programming</td>
+				<td>2023-05-15</td>
+				<td>Not returned</td>
+			</tr>
+		</tbody>
+	</table>
+
+</body>
+</html>

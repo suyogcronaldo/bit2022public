@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Signup Page</title>
+	<style>
+		body {
+            background-image: url('https://images.wallpaperscraft.com/image/single/books_library_shelves_138556_3840x2160.jpg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-color: #EAF4EB;
+			font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+		}
+		
+		button:hover {
+  background-color:#333;
+}
+.tooltip {
+  position: absolute;
+  z-index: 1;
+  display: none;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  top: 60px;
+  right: 0;
+}
+
+.help-link:hover + .tooltip {
+  display: block;
+}
+button:hover {
+  background-color:#333;
+}
+		.logo {
+			font-weight: bold;
+			font-size: 24px;
+		}
+
+		.navbar {
+			background-color: #2E7166;
+			overflow: hidden;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 10px;
+		}
+
+		.navbar a {
+			color: #FFFFFF;
+			text-decoration: none;
+			margin: 0 10px;
+			font-size: 18px;
+		}
+
+		.form-container {
+			background-color: #FFFFFF;
+			max-width: 500px;
+			margin: 50px auto;
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+		}
+
+		.form-container input[type=text], .form-container input[type=email], .form-container input[type=tel] {
+			width: 100%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+		}
+
+		.form-container button {
+			background-color: #2E7166;
+			color: #FFFFFF;
+			padding: 12px 20px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			width: 100%;
+			margin-top: 10px;
+			font-size: 18px;
+		}
+
+		.form-container button:hover {
+			background-color: #1A4731;
+		}
+
+		
+
+	</style>
+</head>
+<body>
+	<div class="navbar">
+		<span class="logo" style="color:#ccc">Smart Library</span>
+		<a href="#" class="help-link">Help</a>
+		<span class="tooltip">Chairman<br>Suyog Baral<br>Contact:<br>suyogbaral9@gmail.com</span>
+	  </div>
+
+	<div class="form-container">
+		<h2 style="color: #2E7166;">Signup Form</h2>
+		<form onsubmit="return validateForm()">
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+			<label for="name">Username:</label>
+			<input type="text" id="username" name="username" placeholder="Enter username" required>
+		
+			<label for="address">Address:</label>
+			<input type="text" id="address" name="address" placeholder="Enter your address" required>
+		
+			<label for="contact">Contact:</label>
+			<input type="tel" id="contact" name="contact" placeholder="Enter your contact number" required>
+		
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+			<label for="password">Password:</label>
+		<input type="password" id="password" name="password" placeholder="Enter password" required>
+		
+			<button type="submit">SignUp</button>
+		</form>
+		
+		<script>
+		function validateForm() {
+			let nameInput = document.getElementById("name");
+			let addressInput = document.getElementById("address");
+			let contactInput = document.getElementById("contact");
+			let emailInput = document.getElementById("email");
+			let passwordInput = document.getElementById("password");
+			let usernameInput = document.getElementById("username");
+		
+			if (nameInput.value.trim() == "") {
+				alert("Please enter your name.");
+				return false;
+			}
+		
+			if (addressInput.value.trim() == "") {
+				alert("Please enter your address.");
+				return false;
+			}
+
+			if (usernameInput.value.trim() == "") {
+				alert("Please enter username.");
+				return false;
+			}
+
+			if (passwordInput.value.trim() == "" || passwordInput.value.trim() < 8) {
+				alert("Please enter a valid 8-digit passowrd.");
+				return false;
+			}
+		
+			if (contactInput.value.trim() == "" || contactInput.value.trim().length != 10 || isNaN(contactInput.value.trim())) {
+				alert("Please enter a valid 10-digit contact number.");
+				return false;
+			}
+		
+			if (emailInput.value.trim() == "") {
+				alert("Please enter your email address.");
+				return false;
+			}
+		
+			return true;
+		}
+		
+		document.querySelector('form').addEventListener('submit', (e) => {
+			e.preventDefault();
+			if (validateForm()) {
+				window.location.replace('smart.html');
+			}
+		});
+		</script>
+		
+		
+	</div>
+
+</body>
+</html>
